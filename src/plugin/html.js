@@ -1,7 +1,7 @@
 import { ROOT_ID } from "../common";
 
 export const createContent = (js) =>
-  `export default String.raw\`${wrapByHtml(js)}\`;`;
+  `export default ${JSON.stringify(wrapByHtml(js))};`;
 
 const wrapByHtml = (js) => `
 <!DOCTYPE html>
